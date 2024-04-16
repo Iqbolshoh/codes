@@ -1,0 +1,5 @@
+Ism: Iqbolshoh
+fam: Ilhomjonov
+yosh: 18
+ID: 777
+baho:5

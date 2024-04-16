@@ -1,0 +1,6 @@
+a = int(input("a = "))
+b = int(input("b = "))
+print("Yig'indi = ", a+b)
+print("Ko'paytma = ", a*b)
+print("a^2 = ", a**2)
+print("b^2 = ", b**2)
