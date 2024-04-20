@@ -7,24 +7,29 @@ int main()
     int t;
     cin >> t;
 
-    while(t --) {
-        string a,b;
+    while (t--)
+    {
+        string a, b;
         cin >> a >> b;
 
-        bool  f = 0;
-        for(int i = 0; i < a.size();i ++) {
-            if(b.find(a[i]) != -1) {
+        bool f = 0;
+        for (int i = 0; i < a.size(); i++)
+        {
+            if (b.find(a[i]) != -1)
+            {
                 cout << "YES\n";
                 f = 1;
                 break;
             }
 
-            if(f == 1) {
+            if (f == 1)
+            {
                 break;
             }
         }
 
-        if(!f) {
+        if (!f)
+        {
             cout << "NO\n";
         }
     }
