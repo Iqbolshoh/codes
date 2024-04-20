@@ -1,24 +1,19 @@
-#include <bits/stdc++.h>
+#include <iostream>
 
 using namespace std;
 
+float Max(float x, float y) { return (x > y) ? x : y; }
+float Min(float x, float y) { return (x < y) ? x : y; }
+
 int main()
 {
-    ifstream cin("input.txt");
-    int a;
+    int a, b, c;
+    cin >> a >> b >> c;
 
-    vector<int> v;
-    while (cin >> a)
-    {
-        v.push_back(a);
-    }
+    int max = Max(Max(a, b), c);
+    int min = Min(Min(a, b), c);
+    int middle = a + b + c - (max + min);
+    cout << min << " " << middle << " " << max << endl;
 
-    int mx = *max_element(v.begin(), v.end());
-    int mn = *min_element(v.begin(), v.end());
-
-    for (int i = mn; i <= mx; i++)
-    {
-        cout << i << " ";
-    }
     return 0;
 }
