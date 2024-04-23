@@ -6,25 +6,15 @@ using namespace std;
 
 int main()
 {
-    int n, max;
-    cin >> n;
-    double arr[n];
-    for (int i = 0; i < n; i++)
+    int a, b, c;
+    cin >> a >> b >> c;
+    double y = 0;
+    double i = -1;
+    while (i <= 1)
     {
-        cin >> arr[i];
-        if (i == 0)
-        {
-            max = arr[i];
-        }
-        if (max < arr[i])
-        {
-            max = arr[i];
-        }
+        y += (pow(sin(a * i), 2) + pow(b, c)) / (pow(b, 2) + pow(cos(i), 2)) - sin(pow(i, 2)) / (a * b);
+        i += 0.25;
     }
-    for (int i = 0; i < n; i++)
-    {
-        arr[i] /= max;
-        cout << fixed << setprecision(2) << arr[i] << endl;
-    }
+    cout << fixed << setprecision(2) << y << endl;
     return 0;
 }
