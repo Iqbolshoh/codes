@@ -6,15 +6,29 @@ using namespace std;
 
 int main()
 {
-    int a, b, c;
-    cin >> a >> b >> c;
-    double y = 0;
-    double i = -1;
-    while (i <= 1)
+    int n;
+    cin >> n;
+    double arr[n], min, a, b;
+    for (int i = 0; i < n; i++)
     {
-        y += (pow(sin(a * i), 2) + pow(b, c)) / (pow(b, 2) + pow(cos(i), 2)) - sin(pow(i, 2)) / (a * b);
-        i += 0.25;
+        cin >> arr[i];
+        if (i == 0)
+        {
+            min = arr[i];
+        }
+        if (min > arr[i])
+        {
+            min = arr[i];
+        }
     }
-    cout << fixed << setprecision(2) << y << endl;
+    cin >> a >> b;
+    for (int i = a - 1; i < b; i++)
+    {
+        arr[i] /= min;
+    }
+    for (int i = 0; i < n; i++)
+    {
+        cout << fixed << setprecision(1) << arr[i] << " ";
+    }
     return 0;
 }
