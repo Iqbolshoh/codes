@@ -1,45 +1,34 @@
 #include <iostream>
+#include <cmath>
+#include <iomanip>
 
 using namespace std;
 
 int main()
 {
-    int n, k, l;
+    int n, min, a, b;
     cin >> n;
-
-    float s = 0, min_element;
-    float a[n];
-
+    double arr[n];
     for (int i = 0; i < n; i++)
     {
-        cin >> a[i];
+        cin >> arr[i];
         if (i == 0)
         {
-            min_element = a[0];
+            min = arr[i];
         }
-        else if (min_element > a[i])
+        if (min > arr[i])
         {
-            min_element = a[i];
+            min = arr[i];
         }
     }
-    cin >> k >> l;
-
-    if (k < 1 || l > n || k > l)
+    cin >> a >> b;
+    for (int i = a - 1; i < b; i++)
     {
-        return 1;
+        arr[i] /= min;
     }
-
-    for (int i = k - 1; i < l; i++)
-    {
-        a[i] = a[i] / min_element;
-    }
-
     for (int i = 0; i < n; i++)
     {
-        s = a[i];
-        printf("%.1f", s);
-        cout << " ";
+        cout << fixed << setprecision(1) << arr[i] << endl;
     }
-
     return 0;
 }
