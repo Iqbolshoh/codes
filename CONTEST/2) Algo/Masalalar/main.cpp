@@ -4,15 +4,24 @@
 
 using namespace std;
 
+double calculateS(double x, int n)
+{
+    double result = 0.0;
+    for (int i = 0; i < n; ++i)
+    {
+        int factorial = 1;
+        for (int j = 1; j <= 2 * i + 1; ++j)
+            factorial *= j;
+        result += pow(-1, i) * pow(x, 2 * i + 1) / factorial;
+    }
+    return result;
+}
+
 int main()
 {
-    double x, y;
-    cin >> x >> y;
-
-    double result = (pow(x, 2) + 1) / (pow(x, 2) + x * y + pow(y, 2) / (pow(y, 2) + abs(x * y) + 5)) +
-                    1 / (1 + cos(x) + 1 / (1 + sin(abs(x))));
-
-    cout << fixed << setprecision(2) << result << endl;
+    int x, n;
+    cin >> x >> n;
+    cout << fixed << setprecision(3) << calculateS(x, n) << endl;
 
     return 0;
 }
