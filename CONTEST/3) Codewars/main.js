@@ -127,3 +127,13 @@
 // let replace = (s) => s.replace(/[aeiouAEIOU]/g, '!');
 
 // let removeExclamationMarks = (s) => s.replace(/!/g, '');
+
+// let oddCount = (n) => parseInt(n / 2)
+
+// let sum = (numbers) => numbers.reduce((acc, curr) => acc + curr, 0)
+
+// let invert = (array) => array.map((value) => -value);
+
+// let toNumberArray = (s)=> s.map((value) => parseFloat(value))
+
+let divisibleBy = (numbers, divisor) => numbers.filter(num => num % divisor === 0);

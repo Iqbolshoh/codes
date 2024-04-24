@@ -1,34 +1,26 @@
 #include <iostream>
-#include <cmath>
-#include <iomanip>
+#include <cstdint>
 
-using namespace std;
+using namespace std; 
+
+uint64_t descendingOrder(uint64_t n)
+{
+    uint64_t k = 0;
+    while (n > 0)
+    {
+        if (k % 10 < n % 10)
+            k = (n % 10) * 10;
+        else
+            k = k * 10 + n % 10;
+        n /= 10;
+    }
+    return k;
+}
 
 int main()
 {
-    int n;
-    cin >> n;
-    double arr[n], min, a, b;
-    for (int i = 0; i < n; i++)
-    {
-        cin >> arr[i];
-        if (i == 0)
-        {
-            min = arr[i];
-        }
-        if (min > arr[i])
-        {
-            min = arr[i];
-        }
-    }
-    cin >> a >> b;
-    for (int i = a - 1; i < b; i++)
-    {
-        arr[i] /= min;
-    }
-    for (int i = 0; i < n; i++)
-    {
-        cout << fixed << setprecision(1) << arr[i] << " ";
-    }
+    uint64_t kirish_son;
+    cin >> kirish_son;
+    cout << descendingOrder(kirish_son) << endl;
     return 0;
 }
