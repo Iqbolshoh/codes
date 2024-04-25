@@ -1,12 +1,20 @@
 #include <iostream>
 
 using namespace std;
-
 int main()
 {
-    for (int i = 1000; i <=9999; i++){
-        int t = i % 10 * 1000 + i / 10 % 10 * 100 + i / 100 % 10 * 10 + i / 1000;
-        if(t*4==i) cout << t << endl;
+    int i = 1;
+    while (i++ > 0)
+    {
+        int S = 0;
+        S += i % 10;
+        i /= 10;
+        if (S == 19)
+        {
+            cout << i;
+            return 0;
+        }
+        cout << i << " " << S << endl;
     }
     return 0;
 }
