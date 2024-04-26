@@ -1,13 +1,6 @@
-s = input()
-n = len(s)
-K = ""
-for i in range(1, n + 1):
-    K += s[-i]
+# print([i for i in input()][::-1])
 
+def digitize(n):
+    return [int(i) for i in str(n)][::-1]
 
-def ozgartir(tekst):
-    tekst = tekst.replace("hs", "sh")
-    tekst = tekst.replace("hc", "ch")
-    tekst = tekst.replace("gn", "ng")
-    return tekst
-print(ozgartir(K))
+print(digitize(35231))

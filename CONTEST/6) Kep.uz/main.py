@@ -16,7 +16,7 @@
 
 # print(int(input(), 2)) #to_decimal 
 
-# n=int(input());print(n*(n+1)*(2*n+1)//6) #daraja
+# print((lambda n:n*(n+1)*(2*n+1)//6)(int(input()))) #daraja
 
 # print('Yes' if int(input()) % 2 == 0 else 'No') #if
 
@@ -28,6 +28,5 @@
 
 # print(sum(1 for harf in input() if harf in "AEIOUaeiou")) #unli
 
-a,b,k = map(int, input().split());print(sum(i for i in range(a,b+1) if i % k == 0)) #sum #boluvchi
-
+# a,b,k = map(int, input().split());print(sum(i for i in range(a,b+1) if i % k == 0)) #sum #boluvchi
 
