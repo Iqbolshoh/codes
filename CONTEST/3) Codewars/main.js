@@ -136,4 +136,6 @@
 
 // let toNumberArray = (s)=> s.map((value) => parseFloat(value))
 
-let divisibleBy = (numbers, divisor) => numbers.filter(num => num % divisor === 0);
+// let divisibleBy = (numbers, divisor) => numbers.filter(num => num % divisor === 0);
+
+// let repeatStr = (n, s) => s.repeat(n);

@@ -3,6 +3,14 @@
 
 using namespace std;
 
+vector<int> countBy(int x, int n)
+{
+    vector<int> v;
+    for (int i = x; i <= n; i++)
+        v.push_back(i);
+    return v;
+}
+
 int main()
 {
     // Vektor yaratish
@@ -31,5 +39,12 @@ int main()
     {
         cout << i << " ";
     }
+
+        vector<int> result = countBy(1, 10);
+        for (int num : result)
+        {
+            cout << num << " ";
+        }
+        cout << endl;
     return 0;
 }
