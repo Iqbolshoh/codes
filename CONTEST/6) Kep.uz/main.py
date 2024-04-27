@@ -44,4 +44,7 @@
 
 # print(*[i for i in range(1000, 9999) if (i//10) % 2 == 0]) 
 
-print(sum(int(r) for r in input()))
+# print(format(eval(input()),".0f")) #yaxlitlash
+
+# print(round(eval(input()))) #yaxlitlash
+
