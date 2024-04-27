@@ -30,3 +30,18 @@
 
 # a,b,k = map(int, input().split());print(sum(i for i in range(a,b+1) if i % k == 0)) #sum #boluvchi
 
+# print("Yes" if input().startswith(input()) else "No") #string #satr
+
+# print(int(input())**int(input())**int(input())) #daraja
+
+# print({'dollar':11000,'yevro':12000,'rubl':180}[input()]*int(input())) #kurs
+ 
+# print("Yes" if (lambda n: n % 3 == 0 or n % 4 == 0 or n % 5 != 0)(int(input())) else "No") #lambda #if
+
+# print((lambda n:n*(n+1)//2)(int(input()))) #sum
+
+# print(sum(int(raqam) for raqam in input())) #raqamlar yigindisi
+
+# print(*[i for i in range(1000, 9999) if (i//10) % 2 == 0]) 
+
+print(sum(int(r) for r in input()))
